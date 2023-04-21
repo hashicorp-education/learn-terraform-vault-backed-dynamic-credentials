@@ -5,8 +5,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-# data "aws_caller_identity" "current" {}
-
 resource "aws_iam_user" "secrets_engine" {
   name = "hcp-vault-secrets-engine"
 }
