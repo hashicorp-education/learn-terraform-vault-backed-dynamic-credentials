@@ -10,8 +10,6 @@ resource "aws_iam_user" "secrets_engine" {
 }
 
 resource "aws_iam_access_key" "secrets_engine_credentials" {
-  # WARNING - The credentials this resource generateds will be written in plaintext in the statefiles for this configuration.
-  # Protect the statefiles for this configuration accordingly!
   user = aws_iam_user.secrets_engine.name
 }
 
